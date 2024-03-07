@@ -8,7 +8,7 @@
         public static int Add(string numbers)
         {
             // Supprimer les espaces de la chaîne d'entrée
-            
+            numbers = numbers.Replace(" ", "");
 
             // Diviser la chaîne de caractères en parties séparées par la virgule
             string[] parts = numbers.Split(',');
