@@ -27,7 +27,7 @@ public class StringCalculatorTest
     [Fact]
     public void QuatrePlusTroisplusdeux()
     {
-        var parts = new int[] {4,3, 2 };
+        var parts = new int[] {4,3,2 };
         var input = string.Join(" , ", parts);
 
         var resultat = Calculator.Add(input);
