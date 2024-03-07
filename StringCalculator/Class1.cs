@@ -7,34 +7,31 @@
     {
         public static int Add(string numbers)
         {
+            // Diviser la chaîne de caractères en parties séparées par la virgule
             string[] parts = numbers.Split(',');
 
-            
-            if (parts.Length != 2)
+            int sum = 0;
+            foreach (string part in parts)
             {
-                throw new ArgumentException("La chaîne doit être de forme 'x,y,'");
+                // Convertir chaque partie en nombre et l'ajouter à la somme
+                sum += int.Parse(part);
             }
 
-            
-            int x = int.Parse(parts[0]);
-            int y = int.Parse(parts[1]);
-
-            
-            return x + y;
+            return sum;
         }
 
         public static void Main(string[] args)
         {
             // Exemple d'utilisation avec différents nombres d'arguments
-            int sum1 = Add("5, 7");
+            int sum1 = Add("5,7");
             Console.WriteLine("La somme est : " + sum1); // Output: La somme est : 12
 
-            int sum2 = Add("9,7");
+            int sum2 = Add("7,8,9");
             Console.WriteLine("La somme est : " + sum2); // Output: La somme est : 22
-
-            
         }
     }
 
-}
+    }
+
+
 
